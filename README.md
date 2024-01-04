@@ -1,4 +1,17 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Setup to get React working in Vite with HMR and some ESLint rules.
 
+# Useful commands:
+
+```
+npm i
+npm run dev
+npm run build
+```
+
+# After build
+
+Rename 'dist' directory to 'docs'.
+
+Add '/purple-website' to the 2 paths in the index (add to images to if you removed before) 
