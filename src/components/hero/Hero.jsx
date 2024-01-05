@@ -50,7 +50,7 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}>NEST OF GUIDES AND TOOLS</motion.h2>
           <motion.h1 variants={textVariants}>
-            VịtRùa
+            VitRua
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <a href="#Guides">
