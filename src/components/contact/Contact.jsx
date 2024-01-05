@@ -60,19 +60,19 @@ const Contact = () => {
           <h2>Please feel free to duck in for any information or corrections.</h2>
         </motion.div>
         <motion.div className="item" variants={variants}>
+          <h2>Mail</h2>
+          <span>vitruastudio@gmail.com</span>
+        </motion.div>
+        <motion.div className="item" variants={variants}>
           <h2>Our experts currently available for you to hire:</h2>
           <div>
             <img src="/favicon.ico" alt="" style={{ width: '16px', height: '16px', marginRight: '8px' }} />
-            <span>Marketing manager</span>
+            <span>Marketing Manager</span>
           </div>
           <div>
             <img src="/favicon.ico" alt="" style={{ width: '16px', height: '16px', marginRight: '8px' }} />
             <span>DevOps Engineer</span>
           </div>
-        </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <span>vitruastudio@gmail.com</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
