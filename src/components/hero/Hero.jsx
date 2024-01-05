@@ -48,7 +48,7 @@ const Hero = () => {
           animate="animate"
           style={{ position: 'relative', zIndex: 1 }}
         >
-          <motion.h2 variants={textVariants}>HOUSE OF GUIDES AND TOOLS</motion.h2>
+          <motion.h2 variants={textVariants}>NEST OF GUIDES AND TOOLS</motion.h2>
           <motion.h1 variants={textVariants}>
             VịtRùa
           </motion.h1>
@@ -59,7 +59,7 @@ const Hero = () => {
               </motion.button>
             </a>
             <a href="#Contact">
-              <motion.button variants={textVariants}>Contact Us</motion.button>
+              <motion.button variants={textVariants}>Let's connect</motion.button>
             </a>
           </motion.div>
           <motion.img
