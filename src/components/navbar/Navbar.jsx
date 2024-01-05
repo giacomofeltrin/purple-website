@@ -13,20 +13,14 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Lama Dev
+          Vitrua Studio
         </motion.span>
         <div className="social">
-          <a href="#">
-            <img src="/facebook.png" alt="" />
+          <a href="https://patreon.com/Vitrua">
+            <img src="/patreon.png" alt="" />
           </a>
-          <a href="#">
+          <a href="https://instagram.com/vitruastudio">
             <img src="/instagram.png" alt="" />
-          </a>
-          <a href="#">
-            <img src="/youtube.png" alt="" />
-          </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="" />
           </a>
         </div>
       </div>

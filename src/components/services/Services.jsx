@@ -52,7 +52,9 @@ const Services = () => {
           <h1>
             <motion.b whileHover={{color:"orange"}}>fun</motion.b> with these
           </h1>
-          <button>SUPPORT THE DEVELOPING</button>
+          <button onClick={() => window.location.href = "https://patreon.com/Vitrua"}>
+            SUPPORT THE DEVELOPING
+          </button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>

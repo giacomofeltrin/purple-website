@@ -12,17 +12,17 @@ const App = () => {
   return (
     <div>
       <Cursor />
-      <section id="Homepage">
+      <section id="Home">
         <Navbar />
         <Hero />
       </section>
-      <section id="Services">
+      <section id="Tools">
         <Parallax type="services" />
       </section>
       <section>
         <Services />
       </section>
-      <section id="Portfolio">
+      <section id="Guides">
         <Parallax type="portfolio" />
       </section>
       <Portfolio />
