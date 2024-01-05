@@ -46,6 +46,7 @@ const Hero = () => {
           variants={textVariants}
           initial="initial"
           animate="animate"
+          style={{ position: 'relative', zIndex: 1 }}
         >
           <motion.h2 variants={textVariants}>HOUSE OF GUIDES AND TOOLS</motion.h2>
           <motion.h1 variants={textVariants}>
