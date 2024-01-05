@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import "./about.scss";
 import { motion, useInView } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 const variants = {
   initial: {
@@ -20,11 +19,6 @@ const variants = {
 
 const About = () => {
   const ref = useRef();
-  const formRef = useRef();
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
-
-  const isInView = useInView(ref, { margin: "-100px" });
 
   return (
     <motion.div
@@ -37,19 +31,17 @@ const About = () => {
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}><motion.b whileHover={{color:"orange"}}>VịtRùa</motion.b></motion.h1>
         <motion.div className="item" variants={variants}>
-          <h4>VịtRùa is a collaborative initiative fueled by the passion of a diverse, international team of tech enthusiasts. 
-            Our project is characterized by versatility, adaptability, and a steady pace towards promoting accessible knowledge 
-            and practical tools for various tasks and needs.
+          <h4>VịtRùa is a collaborative initiative driven by the passion of a diverse, international team of tech enthusiasts, 
+            including students and professionals with varied specializations. 
+            Unified by a shared objective, our team aims to create an inclusive platform that demystifies technology, 
+            offering comprehensive guides accessible to everyone. 
+            The project embodies versatility, adaptability, and a steadfast commitment to promoting accessible knowledge and 
+            practical tools for diverse tasks and needs, ultimately striving to break down barriers and make the vast 
+            realm of technology accessible to individuals from all walks of life.
           </h4>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h4>Our team, comprised of students and professionals with diverse specializations, converges on a common goal: 
-            to create an inclusive platform that demystifies technology and provides comprehensive guides readable by everyone. 
-            'VịtRùa' aims to break down barriers and make the vast realm of technology accessible to individuals from all walks of life.
-          </h4>
-        </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h4>This venture, fueled entirely by our team's dedication during our free time, exemplifies the spirit of collaboration and 
+          <h4>This initiative, fueled entirely by our team's dedication during our free time, exemplifies the spirit of collaboration and 
             community-driven learning. We believe in the power of freely sharing tools and guides to empower individuals globally, 
             fostering a culture of continuous learning and innovation.
           </h4>
@@ -62,24 +54,15 @@ const About = () => {
           </h4>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h4>In the spirit of 'VịtRùa,' join us in this exciting journey where technology meets accessibility, and together, 
-            let's create a world where knowledge knows no bounds.
-          </h4>
+          <h2>Our precious sponsors:</h2>
+          <h5><img src="/favicon.ico" alt="" style={{ width: '16px', height: '16px', marginRight: '1px' }} />Albon, <img src="/favicon.ico" alt="" style={{ width: '16px', height: '16px', marginRight: '1px' }} />JackArgetlam, <img src="/favicon.ico" alt="" style={{ width: '16px', height: '16px', marginRight: '1px' }} />Heobe</h5>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Our precious sponsors</h2>
-          <span>...</span>
-        </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Our experts currently available for you to hire:</h2>
-          <div>
-            <img src="/favicon.ico" alt="" style={{ width: '16px', height: '16px', marginRight: '8px' }} />
-            <span>Marketing Manager</span>
-          </div>
-          <div>
-            <img src="/favicon.ico" alt="" style={{ width: '16px', height: '16px', marginRight: '8px' }} />
-            <span>DevOps Engineer</span>
-          </div>
+          <a href="https://patreon.com/Vitrua">
+            <div className="imageContainer">
+              <img src="/supportmon.png" alt="" style={{ width: '300px', height: '300px', marginRight: '1px' }}/>
+            </div>
+          </a>
         </motion.div>
       </motion.div>
     </motion.div>
