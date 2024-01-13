@@ -13,7 +13,7 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Vitrua Studio
+          Welcome to vitrua.top only official website
         </motion.span>
         <div className="social">
           <a href="https://patreon.com/Vitrua">

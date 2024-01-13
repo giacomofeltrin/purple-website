@@ -9,8 +9,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: 'src/index.html',
-        chobe: 'src/chobe/index.html',
+        main: 'index.html',
+        chobe: 'chobe/index.html',
       },
     },
   },
