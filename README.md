@@ -6,6 +6,7 @@ Setup to get React working in Vite with HMR and some ESLint rules.
 
 ```
 npm i
+npm i @types/node -D
 npm run dev
 npm run build
 ```
