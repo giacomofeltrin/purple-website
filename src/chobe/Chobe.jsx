@@ -1,9 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import "./chobe.scss";
+import Cursor from "./components/cursor/Cursor";
+import ChobeTool from "./components/tool/ChobeTool";
+import Navbar from "./components/navbar/Navbar";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <h1>Test Chobe</h1>
-  </React.StrictMode>,
-  //document.getElementById('root')
-)
+const Chobe = () => {
+  return (
+    <div>
+      <Cursor />
+      <section id="Chobe Tool">
+        <Navbar />
+        <ChobeTool />
+      </section>
+    </div>
+  );
+};
+
+export default Chobe;

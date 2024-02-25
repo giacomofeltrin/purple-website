@@ -67,7 +67,7 @@ const Contact = () => {
           <h2>Our experts currently available for you to hire:</h2>
           <div>
             <img src="/favicon.ico" alt="" style={{ width: '16px', height: '16px', marginRight: '8px' }} />
-            <span>Marketing Manager</span>
+            <span>Business Analyst</span>
           </div>
           <div>
             <img src="/favicon.ico" alt="" style={{ width: '16px', height: '16px', marginRight: '8px' }} />
