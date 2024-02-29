@@ -1,11 +1,24 @@
 @import "../../../app.scss";
 
+.chobe_tool::-webkit-scrollbar {
+  width: 10px;
+}
+
+.chobe_tool::-webkit-scrollbar-track {
+  background: #0c0c1d;
+}
+
+.chobe_tool::-webkit-scrollbar-thumb {
+  background-color: #061a30;
+  border-radius: 20px;
+}
+
 .contact {
   height: 100%;
-  max-width: 1366px;
-  margin: auto;
+  width: 100%; // Takes up the full width of the .container
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 50px;
 
   @include mobile {
