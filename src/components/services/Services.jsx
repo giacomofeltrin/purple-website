@@ -75,7 +75,7 @@ const Services = () => {
             alt="Chobe Italian Media Experience"
             style={{ width: "75px", height: "75px", objectFit: "cover", margin: "0 auto" }}
         /> */}
-          <button>Go</button>
+          <button onClick={() => window.location.href = "https://vitrua.top/chobe/"}>Go</button>
         </motion.div>
         <motion.div
           className="box"

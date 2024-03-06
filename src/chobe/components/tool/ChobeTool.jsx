@@ -54,9 +54,9 @@ const ChobeTool = () => {
         style={{ overflowY: "auto", maxHeight: "calc(100vh - 100px)" }} // Adjust the maxHeight value as needed
       >
         <motion.div className="textContainer" variants={variants}>
-          <motion.h1 variants={variants}><motion.b whileHover={{color:"orange"}}>Chobe</motion.b></motion.h1>
+          <motion.h1 variants={variants}><motion.b whileHover={{color:"orange"}} style={{ marginBottom: '20px' }}>Chobe</motion.b></motion.h1>
           <motion.p align="center" variants={variants}>
-            <img src="https://github.com/giacomofeltrin/chobe/blob/main/kodi20/chobe/resources/images/icon.png?raw=true" alt="Chobe Logo" width="150" />
+            <img src="https://github.com/giacomofeltrin/chobe/blob/main/kodi20/chobe/resources/images/icon.png?raw=true" alt="Chobe Logo" width="150" style={{ marginTop: '10px' }}/>
           </motion.p>
           <motion.p variants={variants}>
             <motion.a href="https://github.com/giacomofeltrin/chobe" variants={variants}>
@@ -70,11 +70,11 @@ const ChobeTool = () => {
             </motion.a>
           </motion.p>
           <motion.div className="item" variants={variants}>
-            <h4>Chobe is a Kodi addon designed to enhance the Italian media consumption experience for learners and enthusiasts. Whether you're interested in dubbed or original Italian content, or you're a fan of Italian-subtitled anime, Chobe brings an authentic touch to your media library.</h4>
-            <h4>Developed for Kodi 20.2-Nexus, this addon may not be compatible with earlier versions.</h4>
+            <h4 style={{ marginTop: '20px' }}>Chobe is a Kodi addon designed to enhance the Italian media consumption experience for learners and enthusiasts. Whether you're interested in dubbed or original Italian content, or you're a fan of Italian-subtitled anime, Chobe brings an authentic touch to your media library.</h4>
+            <h4 style={{ marginTop: '20px' }}>Developed for Kodi 20.2-Nexus, this addon may not be compatible with earlier versions.</h4>
           </motion.div>
           <motion.div className="item" variants={variants}>
-            <h2>Getting Started</h2>
+            <h2 style={{ marginTop: '20px' }}>Getting Started</h2>
             <ol>
               <li>Open Kodi and navigate to the <b>Settings</b> menu.</li>
               <li>Click on <b>System</b>, then <b>Add-ons</b>.</li>
@@ -88,25 +88,25 @@ const ChobeTool = () => {
             </ol>
           </motion.div>
           <motion.div className="item" variants={variants}>
-            <h2>Disclaimer</h2>
-            <h4><b>Important:</b> Chobe is provided as-is, and the developers hold no responsibility for how users utilize the plugin. Users are reminded to ensure they have the legal rights to access and view the media content available through Chobe. The developer does not endorse or encourage any form of copyright infringement.</h4>
+            <h2 style={{ marginTop: '20px' }}>Disclaimer</h2>
+            <h4 style={{ marginTop: '10px' }}><b>Important:</b> Chobe is provided as-is, and the developers hold no responsibility for how users utilize the plugin. Users are reminded to ensure they have the legal rights to access and view the media content available through Chobe. The developer does not endorse or encourage any form of copyright infringement.</h4>
           </motion.div>
           <motion.div className="item" variants={variants}>
-            <h2>Troubleshooting</h2>
-            <h3>Common Issues During Installation</h3>
-            <h4><i>Unknown Sources Error</i></h4>
+            <h2 style={{ marginTop: '20px' }}>Troubleshooting</h2>
+            <h3 style={{ marginTop: '15px' }}>Common Issues During Installation</h3>
+            <h4 style={{ marginTop: '10px' }}><i>Unknown Sources Error</i></h4>
             <ol>
               <li>Return to the Kodi home screen.</li>
               <li>Navigate to <b>System</b>  <b>System Settings</b> <b>Add-ons</b>.</li>
               <li>Toggle the switch for <b>Unknown sources</b> to enable installations from external sources.</li>
             </ol>
-            <h4><i>Repository Installation Error</i></h4>
+            <h4 style={{ marginTop: '10px' }}><i>Repository Installation Error</i></h4>
             <p>If you are unable to install the repository from the provided URL:</p>
             <ul>
               <li>Double-check the URL (<code>https://giacomofeltrin.github.io/chobe</code>) for accuracy.</li>
               <li>Ensure you have a stable internet connection.</li>
             </ul>
-            <h4><i>Addon Installation Fails</i></h4>
+            <h4 style={{ marginTop: '10px' }}><i>Addon Installation Fails</i></h4>
             <p>If the addon installation fails:</p>
             <ul>
               <li>Ensure your Kodi version is 20.2 or later.</li>
@@ -114,8 +114,8 @@ const ChobeTool = () => {
             </ul>
           </motion.div>
           <motion.div className="item" variants={variants}>
-            <h3>Other Common Issues</h3>
-            <h4><i>Media Playback Issues</i></h4>
+            <h3 style={{ marginTop: '15px' }}>Other Common Issues</h3>
+            <h4 style={{ marginTop: '10px' }}><i>Media Playback Issues</i></h4>
             <p>If you experience issues with media playback:</p>
             <ul>
               <li>Verify that your internet connection is stable.</li>
@@ -124,8 +124,8 @@ const ChobeTool = () => {
             <p>If the troubleshooting steps above do not resolve your issue, feel free to <a href="https://github.com/giacomofeltrin/chobe/issues">create a new issue</a> on our GitHub repository. We'll do our best to assist you.</p>
           </motion.div>
           <motion.div className="item" variants={variants}>
-            <h2>Thanks</h2>
-            <h4>Your support helps us continue to enhance Chobe and provide a better Italian media experience for Kodi users.</h4>
+            <h2 style={{ marginTop: '20px' }}>Thanks</h2>
+            <h4 style={{ marginTop: '10px' }}>Your support helps us continue to enhance Chobe and provide a better Italian media experience for Kodi users.</h4>
             <p>Thank you for choosing Chobe! <span role="img" aria-label="Italian Flag">🇮🇹📺</span></p>
             <a href="https://patreon.com/Vitrua">
               <motion.div className="imageContainer" variants={variants}>

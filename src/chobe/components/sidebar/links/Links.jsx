@@ -26,12 +26,13 @@ const itemVariants = {
 
 const Links = () => {
   const items = ["Home", "Tools", "Guides", "Contact", "About Us"];
-
+  const baseUrl = "https://vitrua.top";
+  
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item) => (
         <motion.a
-          href={`#${item}`}
+          href={`${baseUrl}/#${item}`}
           key={item}
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
