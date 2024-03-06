@@ -81,16 +81,16 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Repo template - Self versioning repo</h2>
+          <h2>AutoVersion snippet - for self versioning Github projects</h2>
           <p>
-            A GitHub repository template designed to streamline the process of 
+            A GitHub action snippet designed to streamline the process of 
             versioning and release management for software projects following the 
             conventional commits specification outlined at www.conventionalcommits.org. 
-            By utilizing this template, developers can easily initiate a repository 
+            By utilizing this snippet, developers can easily initiate a project 
             that automatically updates its version based on the 
             semantic versioning (SemVer) rules.
           </p>
-          <button>Go</button>
+          <button onClick={() => window.location.href = "https://vitrua.top/autoversion/"}>Go</button>
         </motion.div>
       </motion.div>
     </motion.div>

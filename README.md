@@ -28,3 +28,12 @@ serve
 Rename 'dist' directory to 'docs'.
 
 Add '/purple-website' to the 2 paths in the index (add to images to if you removed before) 
+
+# New page
+
+- Open `vite.config.js` file and add the page with its index.html
+- Copy in src the directory of a page, like 'chobe' and rename it with the same name of the page
+- Modify index.html inside the folder
+- Modify name and internal names of the 2 jsx and the scss
+- Open the folder with the type, in chobe is 'tool', modify name and internal names of the two files jsx and scss
+- Insert the body of the page is in this jsx file

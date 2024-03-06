@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         chobe: 'chobe/index.html',
+        autoversion: 'autoversion/index.html',
       },
     },
   },
