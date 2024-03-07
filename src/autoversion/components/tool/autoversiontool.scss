@@ -13,12 +13,6 @@
   border-radius: 20px;
 }
 
-//.codeSnippet {
-//  background-color: #1e1e1e;
-//  font-family: 'Courier New', Courier, monospace;
-//  font-size: 13px;
-//}
-
 #codeSnippetContainer {
   position: relative;
   width: 100%;
@@ -44,7 +38,6 @@
   }
 }
 
-
 .contact {
   height: 100%;
   width: 100%; // Takes up the full width of the .container
@@ -54,9 +47,8 @@
   gap: 50px;
 
   @include mobile {
-    width: 100%;
+    flex-direction: column; // Apply flex-direction: column only for mobile screens
     padding: 10px;
-    flex-direction: column;
   }
 
   .textContainer {
@@ -95,7 +87,6 @@
       width: 100%;
     }
 
-
     .phoneSvg {
       stroke: orange;
       position: absolute;
@@ -127,6 +118,7 @@
         background-color: orange;
         cursor: pointer;
         font-weight: 500;
+
         @include mobile {
           padding: 10px;
         }

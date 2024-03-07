@@ -133,7 +133,7 @@ jobs:
 
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v3
+        uses: TriPSs/conventional-changelog-action@v5
         with:
           github-token: $\{{ secrets.GITHUB_TOKEN }}
           release-count: '1000000'
@@ -158,6 +158,11 @@ jobs:
             </code>
           </pre>
         </CodeSnippetContainer>
+        <motion.p variants={variants} style={{ marginBottom: '10px', display: 'flex', justifyContent: 'center' }}>
+            <a href="https://patreon.com/Vitrua">
+                <img src="/supportmon.png" alt="Support" width="200" style={{ marginTop: '10px' }} />
+            </a>
+        </motion.p>
       </motion.div>
     </Container>
   );
