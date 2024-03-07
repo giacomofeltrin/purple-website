@@ -39,6 +39,23 @@ const Container = ({ children }) => {
   );
 };
 
+const CodeSnippetContainer = ({ children }) => {
+  const copyCode = () => {
+    const codeToCopy = document.getElementById("codeSnippet").textContent;
+    navigator.clipboard.writeText(codeToCopy)
+      .then(() => alert("Code copied to clipboard!"))
+      .catch((error) => console.error("Unable to copy code to clipboard", error));
+  };
+
+  return (
+    <div id="codeSnippetContainer" className="codeSnippetContainer">
+      <div className="copy-btn" onClick={copyCode} title="Copy to clipboard">
+        <span role="img" aria-label="Copy">📋</span>
+      </div>
+      {children}
+    </div>
+  );
+};
 
 const AutoversionTool = () => {
   const ref = useRef();
@@ -55,11 +72,18 @@ const AutoversionTool = () => {
       >
         <motion.div className="textContainer" variants={variants}>
           <motion.h1 variants={variants}><motion.b whileHover={{color:"orange"}} style={{ marginBottom: '20px' }}>AutoVersion Snippet</motion.b></motion.h1>
-          <motion.p variants={variants}>
-            A GitHub action snippet designed to streamline the process of versioning and release management for software projects following the conventional commits specification outlined at www.conventionalcommits.org. By utilizing this snippet, developers can easily initiate a project that automatically updates its version based on the semantic versioning (SemVer) rules.
+          <motion.p variants={variants} style={{ marginBottom: '10px' }}>
+            A GitHub action snippet designed to streamline the process of versioning and release management for software projects following the conventional commits specification outlined at www.conventionalcommits.org. 
           </motion.p>
+          <motion.p variants={variants} style={{ marginBottom: '10px' }}>
+            By utilizing this snippet, developers can easily initiate a project that automatically updates its version based on the semantic versioning (SemVer) rules.
+          </motion.p>
+        </motion.div>
+        
+        {/* Code snippet window and copy button */}
+        <CodeSnippetContainer>
           <pre>
-            <code className="codeSnippet">
+            <code id="codeSnippet" className="codeSnippet">
               {`
 # The version is automatically updated in the 'development' branch
 # Ensure 'autoVersion.json' exists for the workflow. Use 'fix' for PATCH and 'feat' for MINOR in commit messages; add 'BREAKING CHANGE' as footer for MAJOR updates.
@@ -133,7 +157,7 @@ jobs:
               `}
             </code>
           </pre>
-        </motion.div>
+        </CodeSnippetContainer>
       </motion.div>
     </Container>
   );
