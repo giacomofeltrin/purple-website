@@ -12,10 +12,6 @@ on:
 jobs:
   continuous-integration:
     runs-on: ubuntu-latest
-
-      contents: write
-      pull-requests: write
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
