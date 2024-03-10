@@ -78,8 +78,72 @@ const AutoversionTool = () => {
           <motion.p variants={variants} style={{ marginBottom: '10px' }}>
             By utilizing this snippet, developers can easily initiate a project that automatically updates its version based on the semantic versioning (SemVer) rules.
           </motion.p>
+          <motion.p variants={variants} style={{ marginBottom: '10px' }}>
+            <strong>Note:</strong> Before adding this snippet, ensure that your repository contains an <code>autoVersion.json</code> file in the root path.
+          </motion.p>
         </motion.div>
         
+        <motion.div className="textContainer" variants={variants}>
+          <motion.p variants={variants} style={{ marginBottom: '10px' }}>
+            <strong>1. Preparation:</strong>
+            <ul>
+              <li>Ensure your GitHub repository adheres to the conventional commits specification as outlined at <a href="https://www.conventionalcommits.org" target="_blank">www.conventionalcommits.org</a>.</li>
+              <li>Make sure you have a <code>development</code> branch in your repository.</li>
+              <li>Verify that your repository includes an <code>autoVersion.json</code> file in the root path.</li>
+            </ul>
+          </motion.p>
+        
+          <motion.p variants={variants} style={{ marginBottom: '10px' }}>
+            <strong>2. Adding the Snippet:</strong>
+            <ul>
+              <li>Go to the <code>.github/workflows</code> directory in your repository.</li>
+              <li>Create a new file, for example, <code>auto-version.yml</code>.</li>
+              <li>Copy and paste the provided code snippet into this file.</li>
+            </ul>
+          </motion.p>
+        
+          <motion.p variants={variants} style={{ marginBottom: '10px' }}>
+            <strong>3. Customization:</strong>
+            <ul>
+              <li>Modify the workflow file as needed to fit your project's requirements. For instance, you can adjust branch names, permissions, or release counts.</li>
+            </ul>
+          </motion.p>
+        
+          <motion.p variants={variants} style={{ marginBottom: '10px' }}>
+            <strong>4. Commit and Push:</strong>
+            <ul>
+              <li>Commit the changes to your repository.</li>
+              <li>Push the commits to trigger the workflow.</li>
+            </ul>
+          </motion.p>
+        
+          <motion.p variants={variants} style={{ marginBottom: '10px' }}>
+            <strong>5. Monitor Workflow Execution:</strong>
+            <ul>
+              <li>Check the Actions tab in your repository to monitor the execution of the workflow.</li>
+              <li>Any commits made to the <code>development</code> branch will now automatically trigger version updates according to your commit messages.</li>
+            </ul>
+          </motion.p>
+        
+          <motion.p variants={variants} style={{ marginBottom: '10px' }}>
+            <strong>6. Review and Release:</strong>
+            <ul>
+              <li>Review the generated changelog (<code>autoChangelog.md</code>) and version updates.</li>
+              <li>Once satisfied, merge the changes into your <code>development</code> branch to release the new version.</li>
+            </ul>
+          </motion.p>
+        
+          <motion.p variants={variants} style={{ marginBottom: '10px' }}>
+            <strong>7. Cleanup (Optional):</strong>
+            <ul>
+              <li>After merging, the workflow will automatically delete the merged branches to keep your repository clean.</li>
+            </ul>
+          </motion.p>
+        </motion.div>
+        
+        That's it! You've successfully integrated AutoVersion into your GitHub Actions workflow, simplifying versioning and release management for your project.
+
+
         {/* Code snippet window and copy button */}
         <CodeSnippetContainer>
           <pre>
