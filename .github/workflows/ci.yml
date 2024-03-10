@@ -27,13 +27,26 @@ jobs:
         run: |
           cd src
           npm ci
-          ls
           npm run build
-          ls
           cd ..
-          ls
-          pwd
           rsync -avh --delete ./src/dist/ ./docs/
-          cd docs
-          ls
         continue-on-error: true
+
+      - name: Add all modifications
+        run: git add docs/
+
+      - name: Commit changes
+        run: git commit -m "Update website"  
+
+      - name: Force push to another branch
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            targetBranch="gh-pages"
+            if ! git show-ref --verify --quiet "refs/heads/$targetBranch"; then
+              git checkout -b $targetBranch
+            else
+              git checkout $targetBranch
+            fi
+            git push origin HEAD:$targetBranch --force
