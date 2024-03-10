@@ -37,17 +37,11 @@ jobs:
           git config --global user.email "cibot@vitrua.top"
           git config --global user.name "[cibot]"
 
-      - name: Add all modifications
-        run: git add docs/
-
-      - name: Commit changes
-        run: git commit -m "Update website"  
-
-      - name: Force push to gh-pages
-        run: |
-          git fetch --all
-          git checkout gh-pages
-          git reset --hard origin/main
-          git push https://github.com/${{ github.repository }} gh-pages --force --quiet --follow-tags --verbose --no-verify
+      - name: Push
+        uses: s0/git-publish-subdir-action@develop
         env:
-          GH_TOKEN: ${{ secrets.PAT }}
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: docs
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "Update website" 
