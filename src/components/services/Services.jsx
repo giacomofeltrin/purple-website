@@ -92,6 +92,19 @@ const Services = () => {
           </p>
           <button onClick={() => window.location.href = "https://vitrua.top/autoversion/"}>Go</button>
         </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <h2>Helm Chart Unused Values Finder - clean your Kubernetes configs</h2>
+          <p>
+            A utility tool designed to assist in the management and optimization of 
+            Kubernetes configurations. 
+            By identifying values within Helm charts that are defined but not utilized in templates, 
+            this python script helps ensuring efficiency and cleanliness in your deployments.
+          </p>
+          <button onClick={() => window.location.href = "https://vitrua.top/helmunused/"}>Go</button>
+        </motion.div>
       </motion.div>
     </motion.div>
   );
