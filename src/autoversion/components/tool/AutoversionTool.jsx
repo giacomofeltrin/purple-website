@@ -191,7 +191,7 @@ jobs:
           git push origin ex-$OLD_VERSION
 
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ex-$\{{ env.OLD_VERSION }} 
 

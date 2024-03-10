@@ -1,0 +1,42 @@
+# Build and relese the website
+name: CI
+
+# Controls when the workflow will activate
+on:
+  push:
+    branches: [ "main" ]
+
+  # Allows this workflow to be run manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  continuous-integration:
+    runs-on: ubuntu-latest
+
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: 'main'
+
+      - uses: actions/setup-node@v4
+        name: setup node
+        with:
+          node-version: 18
+      - run: npm ci
+
+      - name: build
+        run: |
+          cd src
+          ls
+          npm run build
+          ls
+          cd
+          ls
+          rsync -avh --delete src/dist/ docs/
+          cd docs
+          ls
+        continue-on-error: true
