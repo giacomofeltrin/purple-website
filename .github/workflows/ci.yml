@@ -48,6 +48,6 @@ jobs:
           git fetch --all
           git checkout gh-pages
           git reset --hard origin/main
-          git push origin gh-pages --force
+          git push https://github.com/${{ github.repository }} gh-pages --force --quiet --follow-tags --verbose --no-verify
         env:
           GH_TOKEN: ${{ secrets.PAT }}
