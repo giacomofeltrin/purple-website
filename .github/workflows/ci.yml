@@ -32,6 +32,7 @@ jobs:
           ls
           cd
           ls
+          pwd
           rsync -avh --delete ./src/dist/ ./docs/
           cd docs
           ls
