@@ -49,3 +49,5 @@ jobs:
           git checkout gh-pages
           git reset --hard origin/main
           git push origin gh-pages --force
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
