@@ -22,11 +22,11 @@ jobs:
         name: setup node
         with:
           node-version: 18
-      - run: npm ci
 
       - name: build
         run: |
           cd src
+          npm ci
           ls
           npm run build
           ls
