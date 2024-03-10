@@ -37,23 +37,15 @@ jobs:
           git config --global user.email "cibot@vitrua.top"
           git config --global user.name "[cibot]"
 
-      - name: Check if gh-pages branch exists
-        id: check_branch
-        run: |
-          if git show-ref --verify --quiet "refs/heads/gh-pages"; then
-            echo "Branch exists"
-            echo "::set-output name=branch_exists::true"
-          else
-            echo "Branch does not exist"
-            echo "::set-output name=branch_exists::false"
-          fi
-
       - name: Add all modifications
         run: git add docs/
 
       - name: Commit changes
         run: git commit -m "Update website"  
 
-      - name: Force push to gh-pages branch
-        if: steps.check_branch.outputs.branch_exists == 'false'
-        run: git push origin HEAD:gh-pages --force
+      - name: Force push to gh-pages
+        run: |
+          git fetch --all
+          git checkout gh-pages
+          git reset --hard origin/main
+          git push origin gh-pages --force
