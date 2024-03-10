@@ -32,6 +32,11 @@ jobs:
           rsync -avh --delete ./src/dist/ ./docs/
         continue-on-error: true
 
+      - name: Set Git user identity
+        run: |
+          git config --global user.email "cibot@vitrua.top"
+          git config --global user.name "[cibot]"
+
       - name: Add all modifications
         run: git add docs/
 
