@@ -30,7 +30,7 @@ jobs:
           ls
           npm run build
           ls
-          cd
+          cd ..
           ls
           pwd
           rsync -avh --delete ./src/dist/ ./docs/
